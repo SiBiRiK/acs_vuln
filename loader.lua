@@ -15,6 +15,7 @@ for num,child in pairs(game.ReplicatedStorage:GetDescendants()) do
 		print('Version: '..ver)
 	end
 end
+if acs_index == nil then warn'Cannot find ACS Engine in game!' return end
 if acs_index and ver then
 	if ver == '1.7.6' then
 		loadstring(game:HttpGet(base_url.."ACS_FUCKER_1.7.6_v2.lua"))()
