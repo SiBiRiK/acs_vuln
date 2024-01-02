@@ -4,12 +4,12 @@ for num,child in pairs(game.ReplicatedStorage:GetDescendants()) do
 		acs_index = child
 		print('Got ACS Engine index folder!')
 	end
-	if child.Name == 'Eventos' then
+	if child.Name == 'Eventos' and child.Parent == acs_index then
 		events = child
 		ver = '1.7.6'
 		print('Version: '..ver)
 	end
-	if child.Name == 'Events' then
+	if child.Name == 'Events' child.Parent == acs_index then
 		events = child
 		ver = '2.0.1'
 		print('Version: '..ver)
