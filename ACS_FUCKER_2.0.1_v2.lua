@@ -35,6 +35,7 @@ t.TextSize = 30.000
 t.TextWrapped = true
 t.MouseButton1Click:Connect(function()
 	for i,v in pairs(workspace["BTOOLS REPLICATOR"]:GetDescendants())do
+		if v:IsA("BasePart") then
 			local a=v.CFrame
 			local x=v.Size.x
 			local y=v.Size.y
@@ -45,6 +46,7 @@ t.MouseButton1Click:Connect(function()
 				Z = tonumber(z)
 			}
 			create(a,Size)
+		end
 	end
 end)
 a.Parent = s
